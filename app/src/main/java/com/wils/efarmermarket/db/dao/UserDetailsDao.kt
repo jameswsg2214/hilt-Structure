@@ -1,4 +1,4 @@
-package com.wils.efarmermarket.db
+package com.wils.efarmermarket.db.dao
 
 import androidx.room.*
 import com.wils.efarmermarket.model.UserDetails
@@ -17,4 +17,8 @@ interface UserDetailsDao {
 
     @Delete
     fun delete(user: UserDetails)
+
+    @Query("select * from user_details where emailId =:email")
+    fun checkUser(email:String):Boolean
+
 }

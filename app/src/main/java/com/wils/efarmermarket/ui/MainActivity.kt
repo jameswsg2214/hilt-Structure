@@ -8,6 +8,7 @@ import com.wils.efarmermarket.model.UserDetails
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import java.util.*
 
 @ExperimentalCoroutinesApi
 @AndroidEntryPoint
@@ -36,7 +37,10 @@ class MainActivity : AppCompatActivity() {
                 UserDetails(
                     emailId = "wwg@gmail.com",
                     password = "sjdjkbs",
-                    loginType=0
+                    loginType=0,
+                    createdOn = Date(),
+                    mobileNo=99999,
+                    address = "db dsbh"
                 )
             )
         }

@@ -1,6 +1,6 @@
 package com.wils.efarmermarket.repository
 
-import com.wils.efarmermarket.db.UserDetailsDao
+import com.wils.efarmermarket.db.dao.UserDetailsDao
 import com.wils.efarmermarket.model.UserDetails
 import kotlinx.coroutines.*
 import javax.inject.Inject
