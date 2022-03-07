@@ -2,4 +2,10 @@
     <string name="app_name">EFarmerMarket</string>
     <string name="add">add</string>
     <string name="view">view</string>
+    <string name="_0">0</string>
+    <string name="_1">1</string>
+    <string name="go_to_cart">Go to Cart</string>
+    <string name="accepted">Accepted</string>
+    <string name="reject">reject</string>
+    <string name="dispatched">Dispatched</string>
 </resources>

@@ -8,14 +8,14 @@ import com.wils.efarmermarket.model.UserDetails
 @Dao
 interface OrderDetailsDao {
 
-    @Insert
-    fun insert(user: ItemDetails)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insert(user: OrderDetails)
 
     @Query("select * from order_details")
     fun getAllOrders():List<OrderDetails>
 
     @Update
-    fun update(user: ItemDetails)
+    fun update(user: OrderDetails)
 
     @Delete
     fun delete(user: ItemDetails)
@@ -25,5 +25,8 @@ interface OrderDetailsDao {
 
     @Query("select * from order_details where user_uuid =:userUuid")
     fun orderDetailsByUser(userUuid:Int):Boolean
+
+   @Query("select * from order_details where seller_uuid =:userUuid")
+    fun orderDetailsByAdmin(userUuid:Int):List<OrderDetails>
 
 }

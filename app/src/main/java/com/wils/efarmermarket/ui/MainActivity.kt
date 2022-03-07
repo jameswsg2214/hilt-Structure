@@ -1,10 +1,12 @@
 package com.wils.efarmermarket.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import com.wils.efarmermarket.R
 import com.wils.efarmermarket.model.UserDetails
+import com.wils.efarmermarket.ui.login.LoginActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -19,8 +21,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        initObservers()
-        initLisiners()
+        startActivity(Intent(this,LoginActivity::class.java))
+        finishAffinity()
+
+//        initObservers()
+//        initLisiners()
     }
 
     private fun initObservers() {

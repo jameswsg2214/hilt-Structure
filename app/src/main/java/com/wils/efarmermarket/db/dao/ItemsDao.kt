@@ -7,7 +7,7 @@ import com.wils.efarmermarket.model.UserDetails
 @Dao
 interface ItemsDao {
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(user: ItemDetails)
 
     @Query("select * from item_details")

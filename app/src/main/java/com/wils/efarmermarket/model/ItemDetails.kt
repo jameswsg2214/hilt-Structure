@@ -1,6 +1,8 @@
 package com.wils.efarmermarket.model
 
+import android.graphics.Bitmap
 import android.media.Image
+import android.net.Uri
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -10,6 +12,8 @@ data class ItemDetails(
     var uuid:Int? = null,
     var seller_uuid:Int? = null,
     val itemName: String,
+    val prize: String,
+    val unit: String,
     var discription: String,
-    var image: Image
+    var image: Bitmap?
 )

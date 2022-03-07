@@ -3,7 +3,12 @@ package com.wils.efarmermarket.db
 import android.media.Image
 import androidx.room.TypeConverter
 import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import com.wils.efarmermarket.model.CartDetails
+import com.wils.efarmermarket.model.CartDummyDetails
+import java.lang.reflect.Type
 import java.util.*
+
 
 class Converters {
     companion object {
@@ -30,4 +35,5 @@ class Converters {
             return value?.let { value.time }
         }
     }
+
 }
