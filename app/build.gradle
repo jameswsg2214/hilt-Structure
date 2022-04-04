@@ -74,6 +74,6 @@ dependencies {
     implementation "androidx.activity:activity:1.4.0"
 
     //gson
-    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.google.code.gson:gson:2.8.9'
 
 }
